@@ -1,5 +1,3 @@
-import time
-
 from selenium.webdriver import Keys
 
 from src.BasePage import BasePage
