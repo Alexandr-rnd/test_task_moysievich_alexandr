@@ -21,6 +21,7 @@ class GooglePage(BasePage):
         element.send_keys(Keys.ENTER)
         input_google = self.find_element(GooglePageLocators.SEARCH_PLACE)
         check.equal(text, input_google.get_attribute('value'), "Wrong text in input place!")
+        check.is_true(self.find_element(GooglePageLocators.THINK24_LINK), 'Link is not present in search resul!')
 
     def go_to_link_think24(self):
         self.click_of_element(locator=GooglePageLocators.THINK24_LINK)
